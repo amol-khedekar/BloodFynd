@@ -23,6 +23,7 @@ Welcome to BloodFynd, a comprehensive Blood Bank Management System designed to s
 - **Spring Boot**
 - **Spring Security**
 - **Spring Data JPA**
+- **MySQL**
 - **Angular**
 - **HTML**
 - **CSS**
