@@ -18,5 +18,12 @@ Welcome to BloodFynd, a comprehensive Blood Bank Management System designed to s
 - **Blood Stock Management**: Admins can monitor and update blood stock levels, ensuring that the blood bank is always prepared to meet demand.
 - **Request Handling**: Admins can review incoming blood requests and decide whether to accept or reject them based on availability and other factors.
 
-# Technology Stack - * **Languages**: Java, Typescript * **Backend Frameworks:** Spring Boot, Spring Security, Spring Data JPA * **Frontend Tools:** Angular, HTML, CSS * **Databases:** MySQL * **Build tools:** Maven * **Servers:** Tomcat Server
+# Technology Stack - 
+
+* **Languages**: Java, Typescript
+* **Backend Frameworks:** Spring Boot, Spring Security, Spring Data JPA
+* **Frontend Tools:** Angular, HTML, CSS
+* **Databases:** MySQL
+* **Build tools:** Maven
+* **Servers:** Tomcat Server
 
