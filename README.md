@@ -27,3 +27,23 @@ Welcome to BloodFynd, a comprehensive Blood Bank Management System designed to s
 * **Build tools:** Maven
 * **Servers:** Tomcat Server
 
+# Screenshots - 
+
+![alt text](<images/Screenshot (15)-2.png>)
+![alt text](<images/Screenshot (16)-1.png>)
+![alt text](<images/Screenshot (17)-1.png>)
+![alt text](<images/Screenshot (18)-1.png>)
+![alt text](<images/Screenshot (31).png>)
+![alt text](<images/Screenshot (32).png>)
+![alt text](<images/Screenshot (19)-1.png>)
+![alt text](<images/Screenshot (20)-1.png>)
+![alt text](<images/Screenshot (21)-1.png>)
+![alt text](<images/Screenshot (22)-1.png>)
+![alt text](<images/Screenshot (23)-1.png>)
+![alt text](<images/Screenshot (24)-1.png>)
+![alt text](<images/Screenshot (25)-1.png>)
+![alt text](<images/Screenshot (26)-1.png>)
+![alt text](<images/Screenshot (27)-1.png>)
+![alt text](<images/Screenshot (28)-1.png>)
+![alt text](<images/Screenshot (29)-1.png>)
+![alt text](<images/Screenshot (30)-1.png>)

@@ -1,51 +1,86 @@
 <div class="sidebar-logo">
-    <div class="welcometxt" style="float: left;"><b style="color: white;">{{title}}</b></div>
-    <button class="logoutbtn" (click)="navigateHome()"><i class="fa fa-home"></i> Home</button>
-      <b class="sidebar-text" style="color: whitesmoke;"><i class="fa fa-user"></i> Welcome {{loggedUser}}</b>
-      <button class="logoutbtn" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</button>
+  <div class="welcometxt" style="float: left; display: flex; gap: 8px; align-items: center">
+    <img class="logo" [src]="'assets/img/logo.svg'" width="30" height="30"><b>BloodFynd</b>
   </div>
+  <b class="sidebar-text" style="color: black;margin-right: 36px"><i class="fa fa-user"></i> Hello {{loggedUser}}</b>
+  <button class="logoutbtn" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</button>
+</div>
 
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h2 style="text-align: center; font-family: 'Poppins', sans-serif;color: maroon; margin-top: 3%; margin-bottom: 3%;">Overall Request History</h2>
-    </div>
-    <div class="panel-body">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Idendity</th>
-            <th>Name</th>
-            <th>mobile</th>
-            <th>Gender</th>
-            <th>Blood Group</th>
-            <th>age</th>
-            <th>Disease</th>
-            <th>Required Units</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let history of requests | async">
-            <td><img *ngIf="history.gender === 'Male' || history.gender === 'male'" class="bloodimg" [src]="'assets/img/male.png'" width="80" height="80">
-              <img *ngIf="history.gender === 'Female' || history.gender === 'female'" class="bloodimg" [src]="'assets/img/female.png'" width="80" height="80">
-              </td>
-            <td>{{history.name}}</td>
-            <td>{{history.mobile}}</td>
-            <td>{{history.gender}}</td>
-            <td style="color: red; font-size: 25px;">{{history.bloodgroup}}</td>
-            <td>{{history.age}} years</td>
-            <td style="color: navy;">{{history.disease}}</td>
-            <td>{{history.units}} units</td>
-            <td>
-                <div *ngIf="history.status === 'accept' && loggedUser !== 'admin@gmail.com'" class="accepted">Accepted</div>
-                <div *ngIf="history.status === 'false' && loggedUser !== 'admin@gmail.com'" class="pending">Pending</div>
-                <div *ngIf="history.status === 'reject' && loggedUser !== 'admin@gmail.com'" class="rejected">Rejected</div>
-              </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="sidebar-container">
+
+  <ul class="sidebar-navigation">
+    <li>
+      <i class="fa fa-home" aria-hidden="true"></i> <label (click)="navigateHome()" style="cursor: pointer;">Home</label>
+    </li>
+    <li>
+      <i class="fa fa-plus" aria-hidden="true"></i> <label [routerLink]="['/requestblood']" style="cursor: pointer;">Make Request</label>
+    </li>
+
+    <li>
+      <i class="fa fa-heart" aria-hidden="true"></i> <label [routerLink]="['/userasdonor']" style="cursor: pointer;">Donate Blood</label>
+    </li>
+    <li>
+      <i class="fa fa-paper-plane" aria-hidden="true"></i> <label [routerLink]="['/requesthistoryfromuser']" style="cursor: pointer;">Request History</label>
+    </li>
+
+    <li>
+      <i class="fa fa-list" aria-hidden="true"></i> <label [routerLink]="['/donorlist']" style="cursor: pointer;">Available Donors</label>
+    </li>
+    <li>
+      <i class="fa fa-cart-plus" aria-hidden="true"></i> <label [routerLink]="['/bloodStock']" style="cursor: pointer;">Blood stock</label>
+    </li>
+    <li>
+      <i class="fa fa-user" aria-hidden="true"></i> <label [routerLink]="['/userprofile']" style="cursor: pointer;">Edit Profile</label>
+    </li>
+
+
+  </ul>
+</div>
+
+<div class="row main-container panel panel-primary">
+  <div class="panel-heading">
+    <h5 class="main-title" style=" font-family: 'Oswald', sans-serif;color: #0b0f37; margin-top: 3%; margin-bottom: 3%;">Your Request History</h5>
   </div>
+  <div class="panel-body">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Idendity</th>
+        <th>Name</th>
+        <th>Mobile No</th>
+        <th>Gender</th>
+        <th>Blood Group</th>
+        <th>Age</th>
+        <th>Disease</th>
+        <th>Required Units</th>
+        <th>Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let history of requests | async">
+        <td><img *ngIf="history.gender === 'Male' || history.gender === 'male'" class="bloodimg" [src]="'assets/img/male.svg'" width="80" height="80">
+          <img *ngIf="history.gender === 'Female' || history.gender === 'female'" class="bloodimg" [src]="'assets/img/female.svg'" width="80" height="80">
+        </td>
+        <td>{{history.name}}</td>
+        <td>{{history.mobile}}</td>
+        <td>{{history.gender}}</td>
+        <td style="color: red; font-size: 25px;">{{history.bloodgroup}}</td>
+        <td>{{history.age}} years</td>
+        <td style="color: navy;">{{history.disease}}</td>
+        <td>{{history.units}} units</td>
+        <td>
+          <div *ngIf="history.status === 'accept' && loggedUser !== 'admin@gmail.com'" class="accepted">
+            <div class="status-badge-span"></div> Accepted</div>
+          <div *ngIf="history.status === 'false' && loggedUser !== 'admin@gmail.com'" class="pending">
+            <div class="status-badge-span"></div>Pending</div>
+          <div *ngIf="history.status === 'reject' && loggedUser !== 'admin@gmail.com'" class="rejected">
+            <div class="status-badge-span"></div>Rejected</div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <br><br><br><br><br><br><br><br>
-  <app-footer></app-footer>
+<app-footer></app-footer>
