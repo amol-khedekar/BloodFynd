@@ -2,6 +2,34 @@
 
 Welcome to BloodFynd, a comprehensive Blood Bank Management System designed to streamline the processes of blood donation and blood request management. It is designed to simplify and optimize the processes involved in blood donation and blood request management. This system enables efficient user registration, donor management, blood request handling, and blood stock monitoring. With an intuitive interface and robust backend, BloodFynd ensures that blood banks can operate smoothly and effectively.
 
+## Screenshots (Preview)
+<details>
+
+<summary >
+Click here to see preview
+</summary>
+
+![alt text](<images/Screenshot (15)-2.png>)
+
+
+
+![alt text](<images/Screenshot (31).png>)
+![alt text](<images/Screenshot (32).png>)
+
+
+
+![alt text](<images/Screenshot (20)-1.png>)
+
+![alt text](<images/Screenshot (27)-1.png>)
+
+![alt text](<images/Screenshot (29)-1.png>)
+
+
+
+</details>
+
+### [Click here to see more screenshots](#screenshots)
+
 ## Key Features
 
 ### User Registration and Management
@@ -18,7 +46,7 @@ Welcome to BloodFynd, a comprehensive Blood Bank Management System designed to s
 - **Blood Stock Management**: Admins can monitor and update blood stock levels, ensuring that the blood bank is always prepared to meet demand.
 - **Request Handling**: Admins can review incoming blood requests and decide whether to accept or reject them based on availability and other factors.
 
-# Technology Stack - 
+# Technology Stack 
 
 * **Languages**: Java, Typescript
 * **Backend Frameworks:** Spring Boot, Spring Security, Spring Data JPA
@@ -27,7 +55,7 @@ Welcome to BloodFynd, a comprehensive Blood Bank Management System designed to s
 * **Build tools:** Maven
 * **Servers:** Tomcat Server
 
-# Screenshots - 
+## Screenshots 
 
 ![alt text](<images/Screenshot (15)-2.png>)
 ![alt text](<images/Screenshot (16)-1.png>)
